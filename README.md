@@ -1,3 +1,4 @@
+
 # IBMS – Integrated Banking Management System
 
 ## Project Overview
@@ -70,58 +71,76 @@ Responsibilities:
                          v
                 NOTIFICATION SERVICE
                        :8083
+````
 
 Each microservice is independently deployable and uses its own database.
 
-**Technology Stack**
-Java 21
-Spring Boot
-Spring Web
-Spring Data JPA
-MySQL
-OpenFeign
-Maven
-Swagger / OpenAPI
-Database -Distribution
-Microservice	-Database
-Auth Service	- auth_db
-Transaction Service	- transaction_db
-Notification Service -notification_db
-Loan Service - loan_db
+## Technology Stack
 
-API Endpoints
+* Java 21
+* Spring Boot
+* Spring Web
+* Spring Data JPA
+* MySQL
+* OpenFeign
+* Maven
+* Swagger / OpenAPI
 
-Auth Service – 8081
+## Database Distribution
+
+| Microservice         | Database        |
+| -------------------- | --------------- |
+| Auth Service         | auth_db         |
+| Transaction Service  | transaction_db  |
+| Notification Service | notification_db |
+| Loan Service         | loan_db         |
+
+## API Endpoints
+
+### Auth Service – 8081
+
+```text
 POST /auth/register
 GET  /auth/users/{id}
+```
 
-Transaction Service – 8082
+### Transaction Service – 8082
+
+```text
 POST /accounts
 GET  /accounts/{id}
 POST /transactions/deposit
 POST /transactions/withdraw
 POST /transactions/transfer
 GET  /transactions/{id}
+```
 
-Notification Service – 8083
+### Notification Service – 8083
+
+```text
 POST /notifications
 GET  /notifications/{userId}
+```
 
-Loan Service – 8084
+### Loan Service – 8084
+
+```text
 POST /loans/apply
 GET  /loans/{id}
+```
 
-**Microservice Communication**
+## Microservice Communication
 
 OpenFeign is used for service-to-service communication.
 
-Transaction Service → Auth Service
-Loan Service → Notification Service
+* Transaction Service → Auth Service
+* Loan Service → Notification Service
 
-**Swagger Documentation**
+## Swagger Documentation
 
 Swagger UI is available at:
 
+```text
 Auth:
 http://localhost:8081/swagger-ui/index.html
 
@@ -133,23 +152,28 @@ http://localhost:8083/swagger-ui/index.html
 
 Loan:
 http://localhost:8084/swagger-ui/index.html
+```
 
-**How to Run**
+## How to Run
+
 1. Start MySQL.
 2. Create the required databases:
-auth_db
-transaction_db
-notification_db
-loan_db
+
+   * auth_db
+   * transaction_db
+   * notification_db
+   * loan_db
 3. Open each microservice in IntelliJ IDEA.
 4. Run the services on ports 8081–8084.
 5. Open the Swagger URLs to test the APIs.
 
-**Project Status**
-Auth Service: Completed
-Transaction Service: Completed
-Notification Service: Completed
-Loan Service: Completed
-MySQL Database Integration: Completed
-OpenFeign Communication: Completed
-Swagger API Documentation: Completed
+## Project Status
+
+* Auth Service: Completed
+* Transaction Service: Completed
+* Notification Service: Completed
+* Loan Service: Completed
+* MySQL Database Integration: Completed
+* OpenFeign Communication: Completed
+* Swagger API Documentation: Completed
+

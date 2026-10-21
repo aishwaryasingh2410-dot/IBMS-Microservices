@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @FeignClient(
         name = "notification-service",
-        url = "http://localhost:8083"
+        url = "${services.notification.url}"
 )
 public interface NotificationClient {
 

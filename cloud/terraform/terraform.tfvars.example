@@ -1,0 +1,6 @@
+aws_region        = "ap-south-1"
+instance_type     = "t3.micro"
+db_instance_class = "db.t3.micro"
+db_username      = "ibmsadmin"
+db_password      = "REPLACE_WITH_A_STRONG_PASSWORD"
+ssh_cidr          = "YOUR_PUBLIC_IP/32"

@@ -1,0 +1,7 @@
+.env
+.env.aws
+cloud/terraform/terraform.tfvars
+cloud/terraform/.terraform/
+cloud/terraform/*.tfstate
+cloud/terraform/*.tfstate.*
+cloud/terraform/crash.log

@@ -177,3 +177,31 @@ http://localhost:8084/swagger-ui/index.html
 * OpenFeign Communication: Completed
 * Swagger API Documentation: Completed
 
+
+# Cloud Computing Integration
+
+The same IBMS project is also prepared as a cloud-computing project.
+
+## Added Cloud Components
+
+- Docker containerization for all four Spring Boot microservices
+- Docker Compose for local multi-container deployment
+- Nginx API Gateway / reverse proxy
+- Environment-variable based external configuration
+- Persistent Docker volume for local MySQL
+- AWS EC2 deployment target for compute
+- AWS RDS MySQL deployment target for managed database
+- AWS Security Groups for network access control
+- Terraform Infrastructure as Code
+- Separate `docker-compose.aws.yml` for EC2 + RDS deployment
+
+See `cloud/AWS_DEPLOYMENT.md` for the cloud architecture, deployment flow and viva explanation.
+
+## Project Presentation
+
+Four-slide presentations for project submission:
+
+- [Microservices Architecture presentation](IBMS_Microservices_Architecture.pptx)
+- [Cloud Computing presentation](IBMS_Cloud_Computing.pptx)
+
+The cloud presentation describes the AWS deployment design included in this repository. The verified running deployment is the local Docker Compose stack.

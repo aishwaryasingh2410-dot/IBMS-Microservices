@@ -1,7 +1,24 @@
+# Local environment and credentials
 .env
-.env.aws
-cloud/terraform/terraform.tfvars
-cloud/terraform/.terraform/
-cloud/terraform/*.tfstate
-cloud/terraform/*.tfstate.*
-cloud/terraform/crash.log
+.env.*
+!.env.example
+!.env.aws.example
+
+# Java build output
+**/target/
+
+# IDE and operating-system files
+.idea/
+**/.idea/
+.DS_Store
+
+# Terraform local data and secrets
+**/.terraform/
+**/terraform.tfvars
+**/terraform.tfvars.json
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Local submission archive
+/A004_Project.zip
